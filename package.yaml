@@ -1,6 +1,6 @@
 name:                parser-combinators
 version:             0.1.0.0
-github:              "turanct/parser-combinators"
+github:              "turanct/parser-combinators-from-scratch"
 license:             BSD3
 author:              "Toon Daelman"
 maintainer:          "spinnewebber_toon@hotmail.com"
@@ -17,7 +17,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/turanct/parser-combinators#readme>
+description:         Please see the README on GitHub at <https://github.com/turanct/parser-combinators-from-scratch#readme>
 
 dependencies:
 - base >= 4.7 && < 5
