@@ -15,9 +15,9 @@ item = Parser $ \input ->
     (x:xs) -> [(x, xs)]
 
 seq :: Parser a -> Parser b -> Parser (a, b)
-parser1 `seq` parser2 = Parser $ \input -> [ ((v, w), input'')
-                                           | (v, input') <- parse parser1 input
-                                           , (w, input'') <- parse parser2 input' ]
+parser1 `seq` parser2 = Parser $ \input -> [ ((v, w), rest2)
+                                           | (v, rest1) <- parse parser1 input
+                                           , (w, rest2) <- parse parser2 rest1 ]
 
 bind :: Parser a -> (a -> Parser b) -> Parser b
 parser `bind` function = Parser

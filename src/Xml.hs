@@ -47,7 +47,7 @@ attribute :: Parser Attribute
 attribute = do
   _ <- many1 (option whitespace eol)
   key <- many1 (nope (char '='))
-  char '='
+  _ <- char '='
   value <- surroundedBy (char '"')
   return Attribute { key = key
                    , value = value
